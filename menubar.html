@@ -1,0 +1,75 @@
+<!--Created by Gulshan Chandnani-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>Menu bar</title>
+<style>
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+background:#0d0f1b;
+}
+ul{
+position:relative;
+display:flex;
+flex-direction:column;
+}
+ul li{
+list-style:none;
+}
+ul li:before{
+content:attr(data-text);
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+color:#fff;
+font-size:2em;
+font-weight:700;
+pointer-events:none;
+opacity:0;
+letter-spacing:20px;
+transition:0.5s;
+}
+ul li:hover:before{
+opacity:1;
+letter-spacing:20px;
+}
+
+ul li a{
+position:relative;
+display:inline-block;
+padding:10px 18px;
+text-decoration:none;
+background:#2197f3;
+color:#fff;
+text-transform:;
+overflow:hidden;
+transition:0.5s;
+z-index:1;
+}
+ul:hover li a{
+opacity:0;
+}
+ul li a:hover{
+transform:scale(1.5);
+z-index:123;
+background-color:violet;
+opacity:1;
+}
+
+</style>
+
+</head>
+<body>
+<ul>
+<li data-text="HOME"><a href="#">Home</a></li>
+<li data-text="ABOUT"><a href="#">About</a></li>
+<li data-text="WISHLIST"><a href="#">Wishlist</a></li>
+<li data-text="DOWNLOADS"><a href="#">Downloads</a></li>
+<li data-text="HISTORY"><a href="#">History</a></li>
+<li data-text="LOGOUT"><a href="#">Logout</a></li>
+</ul>
+</body>
+</html>
